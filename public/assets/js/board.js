@@ -1,5 +1,5 @@
 (function () {
-  const locale = "<?= $js_locale ?>";
+  const locale = document.body.dataset.locale || "en-US";
 
   function updateClock() {
     const now = new Date();
