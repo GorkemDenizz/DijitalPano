@@ -1,5 +1,6 @@
 (function () {
-  const locale = document.body.dataset.locale || "en-US";
+  const metaTag = document.querySelector('meta[name="locale"]');
+  const locale = metaTag ? metaTag.getAttribute("content") : "en-US";
 
   function updateClock() {
     const now = new Date();
